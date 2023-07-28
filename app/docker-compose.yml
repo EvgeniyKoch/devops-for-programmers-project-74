@@ -2,9 +2,13 @@ version: '3'
 
 services:
   app:
+    image: "kochetov/devops-for-programmers-project-74"
     build:
       context: .
-    volumes:
-      - .:/app
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.production

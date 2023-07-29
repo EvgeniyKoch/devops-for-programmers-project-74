@@ -24,4 +24,4 @@ jobs:
           hexlet-id: ${{ secrets.HEXLET_ID }}
 
       - name: Run App Workflow
-        uses: app/.github/workflows
+        uses: app/.github/workflows/push.yml

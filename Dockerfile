@@ -8,11 +8,11 @@ RUN ln -s /usr/bin/python3 /usr/bin/python
 
 WORKDIR /app
 
-COPY package.json .
-COPY package-lock.json .
+COPY app/package.json .
+COPY app/package-lock.json .
 
 RUN npm ci
 
-COPY . .
+COPY app/ .
 
 CMD ["bash", "-c", "npm run migrate && npx fastify start -a 0.0.0.0 -l info -P app.js"]

@@ -29,5 +29,5 @@ compose-ci-build:
 	docker build -f services/web-nginx/Dockerfile -t hexletbasics/services-web .
 	docker compose -f docker-compose.yml build
 
-compose-ci: compose-ci-build
+compose-ci:
 	docker compose --file docker-compose.yml up --abort-on-container-exit

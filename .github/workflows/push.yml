@@ -12,8 +12,6 @@ jobs:
         uses: actions/setup-node@v3
 
       - name: Install Dependencies
-        run: make setup
-      - name: Test
         run: make compose-ci
       - name: Lint
         run: make lint

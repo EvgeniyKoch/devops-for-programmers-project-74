@@ -22,7 +22,7 @@ compose-stop:
 compose-restart:
 	docker compose restart
 
-compose-setup: compose-down compose-build app-setup
+compose-setup: compose-down compose-build
 
 compose-ci-build:
 	docker build -f Dockerfile.production -t hexletbasics/services-app .

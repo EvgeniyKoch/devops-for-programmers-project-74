@@ -19,4 +19,4 @@ heroku-logs:
 	heroku logs --tail
 
 prepare-env:
-	cp -n .env.example .env
+	cp -n app/.env.example .env

@@ -1,3 +1,3 @@
-FROM node:18-slim
+FROM node:14.18.1
 
 WORKDIR /app

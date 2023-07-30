@@ -1,5 +1,3 @@
-include make-compose.mk
-
 setup:
 	npm ci
 
@@ -20,3 +18,9 @@ heroku-logs:
 
 prepare-env:
 	cp -n app/.env.example .env
+
+compose:
+	docker-compose up
+
+ci:
+	docker-compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app

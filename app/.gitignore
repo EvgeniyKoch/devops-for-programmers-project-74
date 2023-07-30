@@ -27,10 +27,12 @@ coverage
 build/Release
 
 # Dependency directories
-app/node_modules
+node_modules
 jspm_packages
+
 # Optional npm cache directory
 .npm
+
 # Optional REPL history
 .node_repl_history
 
@@ -44,7 +46,8 @@ profile-*
 *.swp
 
 # webstorm
-.idea/
+.idea
+
 # vscode
 .vscode
 *code-workspace
@@ -57,7 +60,3 @@ profile*
 .env
 *.sqlite
 tmp/
-app/.cache
-app/.config
-app/.npm
-app/.bash_history

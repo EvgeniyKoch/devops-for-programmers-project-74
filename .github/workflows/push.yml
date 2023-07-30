@@ -13,12 +13,8 @@ jobs:
         with:
           cash: 'npm'
 
-      - name: Install Dependencies
-        run: make setup
-      - name: Lint
-        run: make lint
-      - name: Test
-        run: make test
+      - name: teest
+        run: make ci
 
   deploy:
     needs: build

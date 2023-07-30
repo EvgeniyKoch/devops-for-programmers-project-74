@@ -38,6 +38,5 @@ jobs:
         with:
           context: .
           push: true
-          cache-from: hexletcomponents/js-fastify-blog:latest
+          cache-from: kochetov/devops-for-programmers-project-74:latest
           cache-to: type=inline
-          tags: hexletcomponents/js-fastify-blog:latest

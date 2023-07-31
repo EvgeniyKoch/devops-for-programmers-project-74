@@ -30,5 +30,6 @@ jobs:
         with:
           context: .
           push: true
+          tags: ${{ secrets.DOCKER_USERNAME }}/devops-for-programmers-project-74:latest
           cache-from: kochetov/devops-for-programmers-project-74:latest
           cache-to: type=inline

@@ -17,7 +17,7 @@ heroku-logs:
 	heroku logs --tail
 
 prepare-env:
-	cp -n app/.env.example .env
+	cp -n .env.example .env
 
 compose:
 	docker-compose up

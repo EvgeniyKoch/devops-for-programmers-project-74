@@ -6,4 +6,4 @@ services:
       context: .
       dockerfile: Dockerfile.production
     image: kochetov/devops-for-programmers-project-74
-    command: npm run test
+    command: bash -c 'sleep 3 && npm start'

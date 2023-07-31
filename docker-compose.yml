@@ -11,7 +11,7 @@ services:
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
       DATABASE_NAME: ${DATABASE_NAME}
       DATABASE_HOST: ${DATABASE_HOST}
-    command: npm test
+    command: bash -c 'sleep 10 && npm run test'
     depends_on: [ db ]
 
   db:

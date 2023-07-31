@@ -2,11 +2,14 @@ version: '3'
 
 services:
   app:
-    command: bash -c 'sleep 3 && npm start'
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
       - ./app:/app
     ports:
       - "8080:8080"
+    command: bash -c 'npm ci && npm run dev'
 
   caddy:
     image: caddy:2.6.4-alpine
@@ -14,7 +17,5 @@ services:
     ports:
       - "80:80"
       - "443:443"
-    depends_on:
-      - app
     volumes:
       - ./services/caddy/Caddyfile:/etc/caddy/Caddyfile

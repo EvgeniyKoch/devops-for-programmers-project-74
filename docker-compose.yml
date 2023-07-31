@@ -5,5 +5,5 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.production
-    image: kochetov/devops-for-programmers-project-74
+    image: kochetov/devops-for-programmers-project-74:latest
     command: npm run test

@@ -10,7 +10,7 @@ dev:
 lint:
 	npx eslint .
 
-test:
+test: prepare-env
 	npm test
 
 heroku-logs:
@@ -20,9 +20,9 @@ prepare-env:
 	cp -n .env.example .env
 
 compose:
-	docker-compose up
+	docker-compose up  --remove-orphans
 
-ci:
+ci: prepare-env
 	docker-compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
 
 stop_all:
@@ -32,4 +32,4 @@ remove_all:
 	docker ps -aq | xargs -L 1 docker rm -f
 
 clean: stop_all remove_all
-
+	rm .env

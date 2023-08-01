@@ -10,7 +10,7 @@ dev:
 lint:
 	npx eslint .
 
-test:
+test: prepare-env
 	npm test
 
 heroku-logs:

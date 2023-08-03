@@ -9,4 +9,7 @@
 
 #### To develop: ``make compose``
 
-#### To test: ``make ci`` (Need a .env file with the configuration for the database)
+#### To test: 
+Need a .env file with the configuration for the database:
+- ``make prepare-env``
+- ``make ci`` 
